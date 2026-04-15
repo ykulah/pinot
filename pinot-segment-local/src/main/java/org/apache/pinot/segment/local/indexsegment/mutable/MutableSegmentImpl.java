@@ -1309,6 +1309,7 @@ public class MutableSegmentImpl implements MutableSegment {
     for (IndexContainer indexContainer : _indexContainerMap.values()) {
       indexContainer.close();
     }
+    _indexContainerMap.clear();
 
     if (_multiColumnTextIndex != null) {
       try {
